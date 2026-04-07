@@ -1,0 +1,2431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIRECTV x Charity Brands — The Creator Network</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #FFFFFF;
+  --near-black: #151515;
+  --cream: #FAF8F5;
+  --cream-dark: #F2EDE8;
+  --slate: #2C3E50;
+  --slate-light: #3d5468;
+  --navy: #1B2A4A;
+  --navy-light: #263a5e;
+  --gold: #D4A853;
+  --gold-light: #F0DDB8;
+  --gold-dim: #b8923f;
+  --coral: #E8836B;
+  --coral-light: #fce8e3;
+  --sage: #D6E5D8;
+  --sage-light: #EBF2EC;
+  --lavender: #E8E0F0;
+  --lavender-light: #F5F0FA;
+  --text-secondary: #5A6575;
+  --text-muted: #8A909B;
+  --border: #E8E4DF;
+  --bg-light: #FAFAF8;
+
+  --font-display: 'Jost', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --page-max: 1100px;
+  --radius: 8px;
+  --radius-lg: 12px;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--near-black);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+}
+
+/* --- NAV --- */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: var(--page-max); margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 var(--space-lg); height: 52px;
+}
+.nav-brand {
+  font-family: var(--font-body);
+  font-size: 0.75rem; font-weight: 600;
+  color: var(--text-secondary); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a {
+  padding: 6px 12px; font-size: 0.6875rem; font-weight: 500;
+  color: var(--text-secondary); text-decoration: none; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover { color: var(--near-black); background: var(--cream); }
+
+/* --- HERO --- */
+.hero {
+  background: linear-gradient(165deg, var(--navy) 0%, #152238 40%, #0d1825 100%);
+  color: var(--white); padding: var(--space-2xl) var(--space-lg);
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; top: -30%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212,168,83,0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-inner { max-width: var(--page-max); margin: 0 auto; position: relative; z-index: 1; }
+.hero-eyebrow {
+  font-family: var(--font-body); font-size: 0.6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--gold); margin-bottom: var(--space-md);
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+.hero h1 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(2.25rem, 2rem + 2.5vw, 3.5rem);
+  line-height: 1.1; letter-spacing: -0.02em;
+  margin-bottom: var(--space-md); max-width: 28ch;
+}
+.hero h1 em { font-style: italic; font-weight: 300; color: var(--gold); }
+.hero-sub {
+  font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+  color: rgba(255,255,255,0.6); max-width: 60ch;
+  margin-bottom: var(--space-xl); line-height: 1.7;
+}
+.hero-stats {
+  display: flex; gap: clamp(24px, 5vw, 56px); flex-wrap: wrap;
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.hero-stat .value {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(1.75rem, 1.5rem + 1.5vw, 2.75rem);
+  color: var(--gold); line-height: 1;
+}
+.hero-stat .label {
+  font-size: 0.6875rem; color: rgba(255,255,255,0.4);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px;
+}
+
+/* --- PAGE --- */
+.page { max-width: var(--page-max); margin: 0 auto; padding: 0 var(--space-lg); }
+
+/* --- SECTIONS --- */
+section { padding: var(--space-2xl) 0; scroll-margin-top: 60px; }
+section + section { border-top: 1px solid var(--border); }
+
+.section-eyebrow {
+  font-family: var(--font-body); font-size: 0.6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--slate); margin-bottom: var(--space-sm);
+}
+h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.625rem, 1.4rem + 1.2vw, 2.25rem);
+  line-height: 1.15; letter-spacing: -0.015em;
+  color: var(--near-black); margin-bottom: var(--space-sm);
+}
+h2 em { font-style: italic; font-weight: 300; }
+.section-lead {
+  color: var(--text-secondary); max-width: 68ch;
+  margin-bottom: var(--space-xl); font-size: 1.0625rem; line-height: 1.7;
+}
+h3 {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  color: var(--slate); margin-bottom: var(--space-sm);
+  letter-spacing: -0.01em;
+}
+
+/* --- INSIGHT BLOCK --- */
+.insight {
+  background: var(--cream);
+  border-left: 3px solid var(--slate);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: var(--space-lg) 0;
+}
+.insight p { color: var(--text-secondary); margin: 0; }
+.insight strong { color: var(--near-black); }
+
+/* --- OPPORTUNITY CARDS --- */
+.opp-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+@media (max-width: 700px) { .opp-grid { grid-template-columns: 1fr; } }
+.opp-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: transform 0.2s ease;
+}
+.opp-card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(44,62,80,0.06); }
+.opp-card .opp-num {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: 2rem; color: var(--border); line-height: 1; margin-bottom: var(--space-xs);
+}
+.opp-card h3 { margin-bottom: var(--space-xs); }
+.opp-card p { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; }
+.opp-card .opp-stat {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.5rem; color: var(--gold-dim); margin-top: var(--space-sm);
+}
+
+/* --- PROOF POINTS --- */
+.proof-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-md); margin: var(--space-lg) 0;
+}
+.proof-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+}
+.proof-card .proof-amount {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.75rem; color: var(--slate); line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+.proof-card .proof-name {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1rem; margin-bottom: 4px;
+}
+.proof-card .proof-cause {
+  font-size: 0.8125rem; color: var(--text-muted);
+}
+.proof-card .proof-reach {
+  font-size: 0.75rem; color: var(--gold-dim); font-weight: 600;
+  margin-top: var(--space-xs); text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+/* --- DOMINIC FEATURED --- */
+.dom-featured {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin: var(--space-lg) 0;
+  position: relative;
+  overflow: hidden;
+}
+.dom-featured::after {
+  content: ''; position: absolute; top: -20%; right: -5%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(212,168,83,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.dom-badge {
+  font-family: var(--font-body); font-size: 0.625rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--gold); margin-bottom: var(--space-md);
+  display: flex; align-items: center; gap: 10px;
+}
+.dom-badge::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+.dom-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-xl);
+  position: relative; z-index: 1;
+}
+@media (max-width: 700px) { .dom-grid { grid-template-columns: 1fr; } }
+.dom-angles { display: flex; flex-direction: column; gap: var(--space-sm); }
+.dom-angle {
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  border-left: 2px solid var(--gold);
+}
+.dom-angle-label {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 0.8125rem; color: var(--gold); margin-bottom: 2px;
+}
+.dom-angle-text {
+  font-size: 0.8125rem; color: rgba(255,255,255,0.6); line-height: 1.5;
+}
+
+/* --- EVENT ARCHITECTURE --- */
+.event-cols {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl);
+  margin: var(--space-lg) 0;
+}
+@media (max-width: 700px) { .event-cols { grid-template-columns: 1fr; } }
+.event-col h4 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--slate); margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs); border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+.event-item {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6;
+}
+.event-item:last-child { border-bottom: none; }
+.event-item strong { color: var(--near-black); }
+
+/* --- CHARITYBUZZ CALLOUT --- */
+.cbz-callout {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  color: var(--white);
+  margin: var(--space-xl) 0;
+}
+.cbz-callout h3 { color: var(--gold); margin-bottom: var(--space-sm); }
+.cbz-callout p { color: rgba(255,255,255,0.7); max-width: 68ch; }
+.cbz-stats {
+  display: flex; gap: var(--space-xl); flex-wrap: wrap;
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.cbz-stat .cbz-val {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.5rem; color: var(--gold); line-height: 1;
+}
+.cbz-stat .cbz-lbl {
+  font-size: 0.6875rem; color: rgba(255,255,255,0.4);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;
+}
+
+/* --- FORMAT CARDS --- */
+.format-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+@media (max-width: 700px) { .format-grid { grid-template-columns: 1fr; } }
+.format-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.format-card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(44,62,80,0.06); }
+.format-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.format-card.fmt-micro::before { background: var(--coral); }
+.format-card.fmt-watch::before { background: var(--gold); }
+.format-card.fmt-giving::before { background: var(--sage); }
+.format-card.fmt-bid::before { background: var(--slate); }
+.format-badge {
+  display: inline-block; font-size: 0.5625rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 3px 10px; border-radius: 20px; margin-bottom: var(--space-sm);
+}
+.badge-series { background: var(--coral-light); color: var(--coral); }
+.badge-live { background: var(--gold-light); color: var(--gold-dim); }
+.badge-docu { background: var(--sage-light); color: #4a6b3a; }
+.badge-auction { background: var(--cream-dark); color: var(--slate); }
+.format-card h4 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.125rem; color: var(--near-black);
+  margin-bottom: var(--space-xs);
+}
+.format-card .format-hook {
+  font-style: italic; color: var(--text-muted); font-size: 0.875rem;
+  margin-bottom: var(--space-sm);
+}
+.format-card p { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; }
+
+/* --- NETWORK SECTION --- */
+.network-grid {
+  display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-xl);
+  margin: var(--space-lg) 0;
+}
+@media (max-width: 700px) { .network-grid { grid-template-columns: 1fr; } }
+.network-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+.network-card h4 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1rem; color: var(--slate); margin-bottom: var(--space-xs);
+}
+.network-card .net-sub {
+  font-size: 0.8125rem; color: var(--text-muted); margin-bottom: var(--space-md);
+}
+.network-card p { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; }
+.net-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.net-stat .net-val {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.25rem; color: var(--slate); line-height: 1;
+}
+.net-stat .net-lbl {
+  font-size: 0.6875rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px;
+}
+.tom-card {
+  background: linear-gradient(135deg, var(--slate) 0%, var(--navy) 100%);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+.tom-card h4 { color: var(--gold); margin-bottom: 2px; font-family: var(--font-display); font-weight: 600; font-size: 1rem; }
+.tom-card .tom-role {
+  font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.4); margin-bottom: var(--space-md);
+}
+.tom-card p { font-size: 0.875rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
+.tom-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.tom-stat .tom-val {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.125rem; color: var(--gold); line-height: 1;
+}
+.tom-stat .tom-lbl {
+  font-size: 0.625rem; color: rgba(255,255,255,0.4);
+  text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px;
+}
+
+/* --- CREATOR CARDS --- */
+.tier-group { margin-bottom: var(--space-xl); }
+.tier-label {
+  font-family: var(--font-body); font-size: 0.6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  padding: 4px 14px; border-radius: 20px; display: inline-block;
+  margin-bottom: var(--space-md);
+}
+.tier-premium { background: var(--gold-light); color: var(--slate); }
+.tier-core { background: var(--sage); color: var(--slate); }
+.tier-discovery { background: var(--lavender); color: #6b5b7b; }
+.tier-desc {
+  color: var(--text-secondary); font-size: 0.9375rem; max-width: 68ch;
+  margin-bottom: var(--space-lg); line-height: 1.6;
+}
+
+.creator-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  background: white;
+}
+.creator-card:hover {
+  box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+  border-color: var(--sage);
+}
+
+.creator-summary {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.creator-summary:hover { background: var(--cream); }
+
+.creator-initial {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.25rem; color: var(--white);
+  flex-shrink: 0;
+}
+.initial-premium { background: var(--slate); }
+.initial-core { background: #5a7a84; }
+.initial-discovery { background: #8b7b9b; }
+
+.creator-photo {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+  transition: border-color 0.2s;
+}
+.creator-card:hover .creator-photo { border-color: var(--gold-light); }
+
+.creator-summary-info { min-width: 0; }
+.creator-name-row {
+  display: flex; align-items: baseline; gap: var(--space-sm);
+  flex-wrap: wrap; margin-bottom: 2px;
+}
+.creator-name {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.125rem; color: var(--near-black);
+}
+.creator-reach-inline {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.125rem; color: var(--slate);
+}
+.creator-platform-line { font-size: 0.8125rem; color: var(--text-muted); margin-top: 2px; }
+.creator-one-liner { font-size: 0.875rem; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
+
+.creator-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.creator-tag {
+  font-size: 0.5625rem; font-weight: 600; padding: 2px 8px;
+  border-radius: 20px; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.tag-veteran { background: #e8eef5; color: #3a4b6b; }
+.tag-cause { background: var(--coral-light); color: var(--coral); }
+.tag-family { background: #fef3e2; color: #8a6b3a; }
+.tag-sports { background: var(--sage-light); color: #4a6b3a; }
+.tag-health { background: var(--lavender-light); color: #6b5b7b; }
+.tag-advocacy { background: #fce8e3; color: #c0553f; }
+.tag-lgbtq { background: #f0e8f5; color: #7b5b9b; }
+.tag-accessibility { background: #e8f0f5; color: #3a5b6b; }
+.tag-military { background: #e8eef5; color: #3a4b6b; }
+
+.expand-toggle {
+  width: 32px; height: 32px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; border: 1px solid var(--border);
+  background: var(--white); color: var(--text-muted);
+  transition: all 0.25s ease; font-size: 0.875rem;
+  cursor: pointer;
+}
+.expand-toggle:hover { border-color: var(--slate); color: var(--slate); }
+.creator-card.open .expand-toggle {
+  transform: rotate(180deg);
+  background: var(--slate); color: var(--white); border-color: var(--slate);
+}
+
+/* --- EXPANDED DETAIL --- */
+.creator-detail {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 var(--space-lg);
+}
+.creator-card.open .creator-detail {
+  max-height: 2000px;
+  padding: 0 var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+.detail-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl);
+  padding-top: var(--space-md);
+}
+@media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
+.detail-section h4 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--slate); margin: var(--space-md) 0 var(--space-xs);
+}
+.detail-section h4:first-child { margin-top: 0; }
+.detail-section p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; }
+
+.rate-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: var(--space-xs);
+}
+.rate-item {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: var(--space-xs) var(--space-sm);
+}
+.rate-platform {
+  font-size: 0.5625rem; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--text-muted); margin-bottom: 2px;
+}
+.rate-value {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1rem; color: var(--slate);
+}
+.bundle-highlight {
+  background: linear-gradient(135deg, var(--sage-light) 0%, var(--cream) 100%);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  margin-top: var(--space-sm);
+}
+.bundle-label {
+  font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 2px;
+}
+.bundle-price {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.25rem; color: var(--slate);
+}
+.bundle-desc { font-size: 0.8125rem; color: var(--text-secondary); margin-top: 2px; }
+.rate-note {
+  font-size: 0.75rem; font-style: italic;
+  color: var(--text-muted); margin-top: var(--space-sm);
+}
+.links-row {
+  display: flex; gap: var(--space-md); margin-top: var(--space-md);
+  padding-top: var(--space-sm); border-top: 1px solid var(--border);
+}
+.links-row a {
+  font-size: 0.75rem; font-weight: 600; color: var(--slate);
+  text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.links-row a:hover { color: var(--gold-dim); }
+
+/* --- SCENARIO CARDS --- */
+.scenario-grid {
+  display: grid; grid-template-columns: 1fr; gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+.scenario-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  transition: transform 0.2s;
+}
+.scenario-card:hover { transform: translateY(-2px); }
+.scenario-1 { background: var(--cream); border: 1px solid var(--border); }
+.scenario-2 { background: linear-gradient(135deg, var(--sage-light) 0%, var(--cream) 100%); border: 1px solid var(--sage); }
+.scenario-3 { background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%); color: var(--white); }
+
+.scenario-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+.scenario-header h3 {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.25rem; margin-bottom: 2px;
+}
+.scenario-3 .scenario-header h3 { color: var(--white); }
+.scenario-label {
+  font-size: 0.75rem; color: var(--text-muted);
+}
+.scenario-3 .scenario-label { color: rgba(255,255,255,0.5); }
+.scenario-amount {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+  color: var(--slate);
+}
+.scenario-3 .scenario-amount { color: var(--gold); }
+.scenario-card ul {
+  list-style: none; padding: 0;
+}
+.scenario-card li {
+  padding: var(--space-xs) 0;
+  font-size: 0.9375rem; color: var(--text-secondary);
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.scenario-3 li { color: rgba(255,255,255,0.7); }
+.scenario-card li::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* --- TIMELINE --- */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 100px repeat(12, 1fr);
+  gap: 2px;
+  margin: var(--space-lg) 0;
+  font-size: 0.6875rem;
+}
+.tl-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 6px 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.tl-row-label {
+  background: var(--cream);
+  padding: 8px;
+  font-weight: 600;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+  display: flex; align-items: center;
+}
+.tl-cell {
+  padding: 8px 4px;
+  text-align: center;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.tl-active { background: var(--sage-light); color: var(--slate); }
+.tl-active-strong { background: var(--slate); color: var(--gold); }
+.tl-gold { background: var(--gold-light); color: var(--gold-dim); }
+.tl-empty { background: var(--bg-light); }
+
+/* --- NEXT STEPS --- */
+.steps-list {
+  list-style: none; padding: 0; counter-reset: steps;
+  max-width: 600px;
+}
+.steps-list li {
+  counter-increment: steps;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: var(--space-md);
+  font-size: 1rem; color: var(--text-secondary); line-height: 1.6;
+}
+.steps-list li::before {
+  content: counter(steps);
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.5rem; color: var(--gold-dim); line-height: 1;
+  flex-shrink: 0; width: 32px;
+}
+.steps-list li strong { color: var(--near-black); }
+
+/* --- FOOTER --- */
+.footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+}
+.footer-inner { max-width: var(--page-max); margin: 0 auto; }
+.footer-name {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.125rem; margin-bottom: 4px;
+}
+.footer-title { font-size: 0.8125rem; color: rgba(255,255,255,0.5); margin-bottom: var(--space-md); }
+.footer-contact a {
+  color: var(--gold); text-decoration: none; font-size: 0.875rem;
+  margin: 0 var(--space-sm);
+}
+.footer-contact a:hover { text-decoration: underline; }
+.footer-conf {
+  font-size: 0.6875rem; color: rgba(255,255,255,0.3);
+  margin-top: var(--space-lg); text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* =============================================
+   ANIMATIONS & SCROLL REVEAL
+   ============================================= */
+
+/* --- Scroll Reveal Base --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger children */
+.stagger > * { transition-delay: calc(var(--i, 0) * 100ms); }
+
+/* --- Hero Entrance --- */
+.hero-eyebrow {
+  animation: fadeSlideDown 0.6s ease-out 0.2s both;
+}
+.hero h1 {
+  animation: fadeSlideDown 0.7s ease-out 0.4s both;
+}
+.hero-sub {
+  animation: fadeSlideDown 0.7s ease-out 0.6s both;
+}
+.hero-stats {
+  animation: fadeSlideUp 0.7s ease-out 0.8s both;
+}
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Counter Animation --- */
+.hero-stat .value, .cbz-val, .net-val, .tom-val, .opp-stat, .proof-amount {
+  transition: transform 0.3s ease-out;
+}
+
+/* --- Card hover enhancements --- */
+.opp-card {
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+.opp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(44,62,80,0.1);
+}
+
+.format-card {
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+.format-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(44,62,80,0.1);
+}
+
+.proof-card {
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+.proof-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(44,62,80,0.08);
+}
+
+.scenario-card {
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+.scenario-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(44,62,80,0.1);
+}
+
+/* --- Creator card open animation --- */
+.creator-card {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease-out;
+}
+.creator-card.open {
+  box-shadow: 0 8px 40px rgba(44,62,80,0.12);
+  border-color: var(--gold-light);
+}
+.creator-detail {
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+}
+
+/* --- Nav active state --- */
+.nav-links a.active {
+  color: var(--near-black);
+  background: var(--cream);
+  font-weight: 600;
+}
+
+/* --- Dominic card pulse glow --- */
+.dom-featured {
+  transition: box-shadow 0.3s ease-out;
+}
+.dom-featured:hover {
+  box-shadow: 0 0 60px rgba(212,168,83,0.12);
+}
+.dom-angle {
+  transition: transform 0.2s ease-out, background 0.2s ease-out;
+}
+.dom-angle:hover {
+  transform: translateX(4px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* --- Charitybuzz callout shimmer --- */
+.cbz-callout {
+  transition: box-shadow 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+.cbz-callout::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212,168,83,0.04), transparent);
+  transition: left 0.8s ease;
+}
+.cbz-callout:hover::before {
+  left: 150%;
+}
+
+/* --- Insight block left-border grow --- */
+.insight {
+  border-left-width: 3px;
+  transition: border-left-width 0.3s ease-out, padding-left 0.3s ease-out;
+}
+.insight:hover {
+  border-left-width: 5px;
+}
+
+/* --- ENHANCED TIMELINE --- */
+.timeline-section-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.timeline-phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+@media (max-width: 700px) { .timeline-phases { grid-template-columns: 1fr 1fr; } }
+
+.tl-phase-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+.tl-phase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(44,62,80,0.1);
+}
+.tl-phase-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.tl-phase-1 { background: var(--cream); border: 1px solid var(--border); }
+.tl-phase-1::before { background: var(--gold); }
+.tl-phase-2 { background: var(--sage-light); border: 1px solid var(--sage); }
+.tl-phase-2::before { background: var(--slate); }
+.tl-phase-3 { background: var(--cream); border: 1px solid var(--border); }
+.tl-phase-3::before { background: var(--coral); }
+.tl-phase-4 { background: linear-gradient(135deg, var(--navy) 0%, var(--slate) 100%); color: var(--white); }
+.tl-phase-4::before { background: var(--gold); }
+
+.tl-phase-num {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: 2.5rem; line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+.tl-phase-1 .tl-phase-num { color: var(--gold); }
+.tl-phase-2 .tl-phase-num { color: var(--slate); }
+.tl-phase-3 .tl-phase-num { color: var(--coral); }
+.tl-phase-4 .tl-phase-num { color: var(--gold); }
+
+.tl-phase-name {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1rem; margin-bottom: 2px;
+}
+.tl-phase-4 .tl-phase-name { color: var(--white); }
+.tl-phase-months {
+  font-size: 0.75rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+.tl-phase-4 .tl-phase-months { color: rgba(255,255,255,0.4); }
+
+.tl-phase-items {
+  list-style: none; padding: 0;
+}
+.tl-phase-items li {
+  font-size: 0.8125rem; color: var(--text-secondary);
+  padding: 4px 0;
+  display: flex; align-items: flex-start; gap: 8px;
+  line-height: 1.4;
+}
+.tl-phase-4 .tl-phase-items li { color: rgba(255,255,255,0.6); }
+.tl-phase-items li::before {
+  content: '';
+  width: 5px; height: 5px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 6px;
+}
+.tl-phase-1 .tl-phase-items li::before { background: var(--gold); }
+.tl-phase-2 .tl-phase-items li::before { background: var(--slate); }
+.tl-phase-3 .tl-phase-items li::before { background: var(--coral); }
+.tl-phase-4 .tl-phase-items li::before { background: var(--gold); }
+
+/* Enhanced Gantt */
+.gantt-wrapper {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  overflow-x: auto;
+}
+.timeline-grid {
+  min-width: 800px;
+  font-size: 0.75rem;
+  gap: 3px;
+}
+.tl-header {
+  padding: 10px 8px;
+  font-size: 0.6875rem;
+  border-radius: 4px;
+}
+.tl-row-label {
+  border-radius: 4px;
+  padding: 12px 10px;
+  font-size: 0.6875rem;
+}
+.tl-cell {
+  padding: 12px 6px;
+  border-radius: 4px;
+  font-size: 0.625rem;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.tl-cell:not(.tl-empty):hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(44,62,80,0.15);
+  z-index: 2;
+  position: relative;
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-eyebrow, .hero h1, .hero-sub, .hero-stats {
+    animation: none;
+  }
+  .cbz-callout::before { display: none; }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">DIRECTV x Charity Brands</div>
+    <div class="nav-links">
+      <a href="#opportunity">Opportunity</a>
+      <a href="#campaigns">Campaigns</a>
+      <a href="#formats">Formats</a>
+      <a href="#propagate">Propagate</a>
+      <a href="#select">Select</a>
+      <a href="#network">Team</a>
+      <a href="#roster">Roster</a>
+      <a href="#investment">Investment</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#next">Next Steps</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Strategic Partnership Proposal</div>
+    <h1>The <em>Creator Network</em> Behind DIRECTV's Giving Program</h1>
+    <p class="hero-sub">The proposal outlines the architecture. This document shows you the people, the formats, and the infrastructure that turn DIRECTV's giving partnerships into a nationally scaled, creator-driven impact program.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="value">600+</div>
+        <div class="label">Managed Creators</div>
+      </div>
+      <div class="hero-stat">
+        <div class="value">13</div>
+        <div class="label">Creators Selected</div>
+      </div>
+      <div class="hero-stat">
+        <div class="value">150+</div>
+        <div class="label">Series Produced</div>
+      </div>
+      <div class="hero-stat">
+        <div class="value">$10B+</div>
+        <div class="label">Raised for Causes</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- SECTION 1: OPPORTUNITY -->
+<section id="opportunity">
+  <div class="section-eyebrow">The Opportunity</div>
+  <h2>DIRECTV is entering a <em>new chapter</em></h2>
+  <p class="section-lead">As of July 2025, DIRECTV is 100% owned by TPG Capital. No longer a subsidiary. An independent company with 30 years of brand equity, millions of loyal customers, and a genuine culture of community care. The window to build a world-class giving program is now.</p>
+
+  <div class="opp-grid reveal stagger">
+    <div class="opp-card" style="--i:0">
+      <div class="opp-num">01</div>
+      <h3>The Moment</h3>
+      <p>TPG is a sophisticated PE owner. ESG performance, brand reputation, and community trust are value drivers, not soft variables. A measurable giving program is a business asset.</p>
+      <div class="opp-stat">15,000 volunteer hours in 2025</div>
+    </div>
+    <div class="opp-card" style="--i:1">
+      <div class="opp-num">02</div>
+      <h3>The Partnerships</h3>
+      <p>Bob Woodruff Foundation for veterans. Ronald McDonald House Charities for families. Two outstanding nonprofits. Real relationships. The foundation is already laid.</p>
+    </div>
+    <div class="opp-card" style="--i:2">
+      <div class="opp-num">03</div>
+      <h3>The Gap</h3>
+      <p>Current program: volunteer hours, in-kind services, event sponsorships. No donor-acquisition engine. No creator strategy. Goals for Good is creative but limited to student-athlete ambassadors.</p>
+    </div>
+    <div class="opp-card" style="--i:3">
+      <div class="opp-num">04</div>
+      <h3>The Unlock</h3>
+      <p>Creator-led content turns subscribers into a giving platform. AI segmentation identifies who gives to what. Government grants multiply every dollar 3-5x. The architecture just needs to be built.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: CREATOR-LED CAMPAIGNS -->
+<section id="campaigns">
+  <div class="section-eyebrow">Creator-Led Giving</div>
+  <h2>Creators who <em>move money</em></h2>
+  <p class="section-lead">These are not influencer posts. These are people who have actually moved dollars to nonprofits. The same infrastructure that powered their campaigns can be deployed for DIRECTV's giving partners.</p>
+
+  <div class="proof-grid reveal stagger">
+    <div class="proof-card" style="--i:0">
+      <div class="proof-amount">$525K</div>
+      <div class="proof-name">Tyler Oakley</div>
+      <div class="proof-cause">Single Prizeo campaign for Trevor Project. $1M+ cumulative.</div>
+      <div class="proof-reach">13M Total Reach</div>
+    </div>
+    <div class="proof-card" style="--i:1">
+      <div class="proof-amount">GLAAD</div>
+      <div class="proof-name">Chris Olsen</div>
+      <div class="proof-cause">Queer Advocate of the Year nominee. White House vaccine campaign.</div>
+      <div class="proof-reach">17M Total Reach</div>
+    </div>
+    <div class="proof-card" style="--i:2">
+      <div class="proof-amount">4.9M+</div>
+      <div class="proof-name">Miki Rai &amp; Dr. Kevin</div>
+      <div class="proof-cause">RN + surgical resident couple. Health education meets family content. Natural RMHC ambassadors.</div>
+      <div class="proof-reach">Healthcare Credibility</div>
+    </div>
+  </div>
+
+  <!-- Dominic Wakeham Featured Card -->
+  <div class="dom-featured reveal-scale">
+    <div class="dom-badge">U.S. Marine Corps Veteran</div>
+    <div class="dom-grid">
+      <div class="dom-info">
+        <h3 style="color: var(--white); font-size: 1.5rem; margin-bottom: var(--space-xs);">Dominic Wakeham</h3>
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-md); line-height: 1.7;">Dominic is a U.S. Marine veteran whose content blends humor with fitness and self-growth. His military service is not a talking point. It is his identity. With 2.8M followers across platforms, he reaches exactly the audience that gives to veteran causes: young, active, patriotic, and engaged. He is the natural anchor for DIRECTV's Bob Woodruff Foundation creator campaign.</p>
+        <div style="display: flex; gap: var(--space-xl); flex-wrap: wrap;">
+          <div>
+            <div style="font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; color: var(--gold); line-height: 1;">2.8M+</div>
+            <div style="font-size: 0.625rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px;">Total Reach</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; color: var(--gold); line-height: 1;">2.2M</div>
+            <div style="font-size: 0.625rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px;">TikTok</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; color: var(--gold); line-height: 1;">574K</div>
+            <div style="font-size: 0.625rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px;">Instagram</div>
+          </div>
+        </div>
+      </div>
+      <div class="dom-angles">
+        <div class="dom-angle">
+          <div class="dom-angle-label">BWF Campaign Anchor</div>
+          <div class="dom-angle-text">Lead creator for the Bob Woodruff Foundation veteran creator campaign. His audience skews male 18-35, overlapping directly with DIRECTV's sports subscriber base.</div>
+        </div>
+        <div class="dom-angle">
+          <div class="dom-angle-label">"Home Team" Lead</div>
+          <div class="dom-angle-text">Natural lead for the microdrama series. The "veteran coming home to the game" episode writes itself with Dominic as the face.</div>
+        </div>
+        <div class="dom-angle">
+          <div class="dom-angle-label">Goals for Good Host</div>
+          <div class="dom-angle-text">His humor-forward style makes him the ideal host for live Goals for Good watch parties. Sports, comedy, and a reason to care.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>DIRECTV Gives: Event Architecture</h3>
+  <p class="section-lead">Two tracks, both creator-hosted and promoted. Internal events build employee pride. Community events build brand love. Creators provide the reach that makes both visible at national scale.</p>
+
+  <div class="event-cols reveal">
+    <div class="event-col">
+      <h4>Internal (Employee-Focused)</h4>
+      <div class="event-item"><strong>Creator-hosted volunteer events</strong> for DIRECTV employees. A veteran creator hosts a BWF service day. A family creator hosts an RMHC house visit.</div>
+      <div class="event-item"><strong>Creator-led internal content.</strong> An RMHC family creator produces a "day at the Ronald McDonald House" feature with DIRECTV employee volunteers.</div>
+      <div class="event-item"><strong>Employee giving challenges</strong> amplified by creators on social. Donation match drives promoted to their audiences, driving participation and visibility.</div>
+    </div>
+    <div class="event-col">
+      <h4>External (Community Events)</h4>
+      <div class="event-item"><strong>Creator-hosted community giving events</strong> in DIRECTV markets. 32 markets, 32 events. Local creators activate local audiences for national impact.</div>
+      <div class="event-item"><strong>Prizeo sweepstakes</strong> tied to DIRECTV programming moments. Playoff games, award shows. Enter at $10, win VIP experiences, proceeds to BWF or RMHC.</div>
+      <div class="event-item"><strong>Goals for Good amplification.</strong> Creators promote the per-goal donation mechanic to millions of followers, turning a corporate write-a-check into participatory entertainment.</div>
+    </div>
+  </div>
+
+  <!-- Charitybuzz Callout -->
+  <div class="cbz-callout reveal-scale">
+    <h3>Powered by Charitybuzz + Prizeo</h3>
+    <p>The world's leading celebrity-experience charitable fundraising platform. Turnkey infrastructure for auctions, sweepstakes, and VIP experiences. DIRECTV does not need to build fundraising technology. It already exists.</p>
+    <div class="cbz-stats">
+      <div class="cbz-stat">
+        <div class="cbz-val">$650M+</div>
+        <div class="cbz-lbl">Raised to Date</div>
+      </div>
+      <div class="cbz-stat">
+        <div class="cbz-val">200K+</div>
+        <div class="cbz-lbl">HNW Donors</div>
+      </div>
+      <div class="cbz-stat">
+        <div class="cbz-val">$20M+</div>
+        <div class="cbz-lbl">Hamilton Campaigns</div>
+      </div>
+      <div class="cbz-stat">
+        <div class="cbz-val">125K+</div>
+        <div class="cbz-lbl">Auctions Run</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: FORMAT CONCEPTS -->
+<section id="formats">
+  <div class="section-eyebrow">Format Concepts</div>
+  <h2>Shows, not just <em>posts</em></h2>
+  <p class="section-lead">DIRECTV is a media company. The creator strategy should think in formats, not just content. These are producible series concepts, backed by Propagate Content's production infrastructure.</p>
+
+  <div class="format-grid reveal stagger">
+    <div class="format-card fmt-micro" style="--i:0">
+      <span class="format-badge badge-series">Scripted Series</span>
+      <h4>"Home Team" Microdrama</h4>
+      <div class="format-hook">60-90 second episodes. 6-8 per season. Creator-cast, not actor-cast.</div>
+      <p>Short-form scripted stories built around real DIRECTV moments. A family watching the big game. A veteran coming home to the game on. A Ronald McDonald House family finding comfort in familiar programming. Produced through Propagate. Distributed across TikTok, YouTube Shorts, and Reels.</p>
+    </div>
+    <div class="format-card fmt-watch" style="--i:1">
+      <span class="format-badge badge-live">Live Format</span>
+      <h4>"Goals for Good: The Watch Party"</h4>
+      <div class="format-hook">Every goal triggers a visible donation counter. Fans pledge in comments.</div>
+      <p>Take the existing Goals for Good mechanic and make it participatory entertainment. Creator watches the game, reacts in real-time, donation counter ticks up on screen. Scalable across all 32 markets with local creators. Turns corporate CSR into appointment viewing.</p>
+    </div>
+    <div class="format-card fmt-giving" style="--i:2">
+      <span class="format-badge badge-docu">Documentary</span>
+      <h4>"The Giving Room"</h4>
+      <div class="format-hook">5-10 minute interviews. A living room. DIRECTV on in the background.</div>
+      <p>Longer-form series where creators tell the story of a cause they care about. Tyler Oakley on Trevor Project. Dominic Wakeham on veteran transition. A family creator on their RMHC experience. Warm, editorial, shareable. Propagate produces, DIRECTV distributes.</p>
+    </div>
+    <div class="format-card fmt-bid" style="--i:3">
+      <span class="format-badge badge-auction">Charitybuzz x DIRECTV</span>
+      <h4>"Bid for Good"</h4>
+      <div class="format-hook">Celebrity and creator experiences. Only DIRECTV can unlock them.</div>
+      <p>VIP sports experiences auctioned on Charitybuzz. Watch a game from the booth. Attend a taping. Meet an athlete. Promoted through DIRECTV's subscriber base and creator social channels. Prizeo sweepstakes at $10 entry for mass participation. Proven model: Lin-Manuel Miranda raised $20M+ this exact way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4A: PROPAGATE CONTENT -->
+<section id="propagate">
+  <div class="section-eyebrow">The Production Company</div>
+  <h2>Propagate <em>Content</em></h2>
+  <p class="section-lead">The format concepts in this proposal are not hypothetical. They are backed by one of the largest independent production companies in entertainment, with the infrastructure, relationships, and capital to produce at scale.</p>
+
+  <div class="network-card reveal" style="margin-bottom: var(--space-lg);">
+    <h4>Co-founded by Ben Silverman</h4>
+    <div class="net-sub">Former co-chairman of NBC Entertainment. The executive behind The Office, Ugly Betty, and Jane the Virgin.</div>
+    <p>Propagate Content is an independent production powerhouse with 150+ series produced across Netflix, Hulu, Apple TV, and major networks. In February 2026, Ares Capital made a $50M investment in the company, validating its position as one of the most significant independent content platforms in the industry. Propagate is not just a production company. It is a talent ecosystem: four management companies (Select Management, Artists First, Authentic Talent &amp; Literary, Parker Talent) operating under one roof, connecting production capability directly to talent access.</p>
+    <div class="net-stats">
+      <div class="net-stat">
+        <div class="net-val">$200M</div>
+        <div class="net-lbl">Valuation</div>
+      </div>
+      <div class="net-stat">
+        <div class="net-val">$50M</div>
+        <div class="net-lbl">Ares Capital Investment (Feb 2026)</div>
+      </div>
+      <div class="net-stat">
+        <div class="net-val">150+</div>
+        <div class="net-lbl">Series Produced</div>
+      </div>
+      <div class="net-stat">
+        <div class="net-val">4</div>
+        <div class="net-lbl">Talent Companies</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <p><strong>Why this matters for DIRECTV:</strong> When we pitch format concepts like "Home Team" or "The Giving Room," we are not pitching ideas. We are pitching producible shows, from a company that has produced 150+ of them. The gap between concept and production is zero.</p>
+  </div>
+</section>
+
+<!-- SECTION 4B: SELECT MANAGEMENT -->
+<section id="select">
+  <div class="section-eyebrow">The Creator Network</div>
+  <h2>Select <em>Management</em></h2>
+  <p class="section-lead">Every creator in this proposal is managed through Select Management Group, a Propagate Content subsidiary. This is not a talent database. It is a managed roster with direct relationships, confirmed rates, and operational infrastructure.</p>
+
+  <div class="network-card reveal" style="margin-bottom: var(--space-lg);">
+    <h4>600+ Digital Creators Across 73 Verticals</h4>
+    <div class="net-sub">Part of the Propagate Content ecosystem alongside Artists First, Authentic Talent &amp; Literary, and Parker Talent</div>
+    <p>Select Management represents some of the most recognized digital creators in the world, spanning lifestyle, comedy, fitness, family, health, entertainment, and advocacy. The sister companies within Propagate extend the talent pool into traditional celebrity: Artists First manages Jordan Peele, John Travolta, Martin Lawrence, Jon Chu, and LL Cool J. For DIRECTV's cause marketing program, Select provides the creator access while Artists First opens the door to celebrity amplification when the program is ready to scale.</p>
+    <div class="net-stats">
+      <div class="net-stat">
+        <div class="net-val">600+</div>
+        <div class="net-lbl">Managed Creators</div>
+      </div>
+      <div class="net-stat">
+        <div class="net-val">73</div>
+        <div class="net-lbl">Content Verticals</div>
+      </div>
+      <div class="net-stat">
+        <div class="net-val">1B+</div>
+        <div class="net-lbl">Combined Reach</div>
+      </div>
+      <div class="net-stat">
+        <div class="net-val">$776K</div>
+        <div class="net-lbl">Brand Revenue (4 Months)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4C: TOM NWACHUKU -->
+<section id="network">
+  <div class="section-eyebrow">Integrated Consulting</div>
+  <h2>The operator <em>behind the network</em></h2>
+
+  <div class="network-grid reveal">
+    <div class="network-card">
+      <h4>How It Works</h4>
+      <div class="net-sub">Charity Brands + Summit Digital + Select Management</div>
+      <p>Charity Brands is the face of the engagement. It brings 25 years of cause marketing expertise, $10B+ raised, and personal C-suite relationships at 50+ Fortune 500 companies. Summit Digital adds the modern performance layer: creator access through Select Management, measurable campaign execution, and the AI-powered infrastructure that turns giving programs into data-driven institutions. The format concepts are produced through Propagate Content. The creator roster is managed through Select. The strategy and execution are integrated through Summit Digital.</p>
+    </div>
+    <div class="tom-card">
+      <h4>Tom Nwachuku</h4>
+      <div class="tom-role">Founder, Summit Digital</div>
+      <p>Previously led entertainment and platform sales relationships across Meta and TikTok, then built Summit Digital around creator-led growth and measurable execution.</p>
+      <div class="tom-stats">
+        <div class="tom-stat">
+          <div class="tom-val">300+</div>
+          <div class="tom-lbl">TikTok Clients</div>
+        </div>
+        <div class="tom-stat">
+          <div class="tom-val">$40M+</div>
+          <div class="tom-lbl">Meta Portfolio</div>
+        </div>
+        <div class="tom-stat">
+          <div class="tom-val">530+</div>
+          <div class="tom-lbl">Creator Network</div>
+        </div>
+        <div class="tom-stat">
+          <div class="tom-val">$10M</div>
+          <div class="tom-lbl">Veteran Voices</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: CREATOR ROSTER -->
+<section id="roster">
+  <div class="section-eyebrow">Creator Roster</div>
+  <h2>The <em>team</em></h2>
+  <p class="section-lead">Twelve creators and one duo, selected for cause marketing credibility, audience alignment with Bob Woodruff Foundation and Ronald McDonald House Charities, and documented impact. Click any card for details and rates.</p>
+
+  <!-- PREMIUM TIER -->
+  <div class="tier-group">
+    <span class="tier-label tier-premium">Premium</span>
+    <p class="tier-desc">Highest reach, strongest cause credentials. Campaign anchors with documented fundraising impact and national recognition.</p>
+
+    <!-- Chris Olsen -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/chrisolsen2.jpg" alt="Chris Olsen">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Chris Olsen</span>
+            <span class="creator-reach-inline">17M+</span>
+          </div>
+          <div class="creator-platform-line">14M TT &bull; 2.5M IG &bull; 230K YT &bull; Los Angeles, CA</div>
+          <div class="creator-one-liner">LGBTQ+ advocate, GLAAD Queer Advocate of the Year nominee. Interviewed Dr. Fauci for the White House vaccine education campaign.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-lgbtq">LGBTQ+ Advocate</span>
+            <span class="creator-tag tag-cause">Cause Marketing</span>
+            <span class="creator-tag tag-health">Mental Health</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Chris Olsen is the largest creator on the Select Management roster and one of the most recognized LGBTQ+ voices in digital media. His content spans lifestyle, comedy, and advocacy, with a gift for making important conversations feel personal and accessible. He co-founded Flight Fuel coffee brand with proceeds tied to environmental causes through Ecologi tree planting.</p>
+            <h4>Cause Credentials</h4>
+            <p>GLAAD's inaugural Queer Advocate of the Year nominee. Participated in the White House "Made To Save" vaccine education campaign, interviewing Dr. Fauci directly. His platform has been consistently used to drive awareness for LGBTQ+ rights, mental health destigmatization, and AAPI representation.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">TikTok Video</div>
+                <div class="rate-value">$35,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$30,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">YT Integration</div>
+                <div class="rate-value">$25,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$12,000</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$55,000</div>
+              <div class="bundle-desc">TikTok Video + IG Reel + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms. Rates reflect cause marketing positioning.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/chrisolsen" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@chris" target="_blank">TikTok</a>
+          <a href="https://www.youtube.com/@ChrisOlsen" target="_blank">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tyler Oakley -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/tyleroakley2.jpg" alt="Tyler Oakley">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Tyler Oakley</span>
+            <span class="creator-reach-inline">13M+</span>
+          </div>
+          <div class="creator-platform-line">6.6M YT &bull; 6.1M IG &bull; 208K TT &bull; Los Angeles, CA</div>
+          <div class="creator-one-liner">Raised $525K in a single Prizeo campaign for The Trevor Project. $1M+ cumulative. VidCon Hall of Fame. Met with President Obama.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-cause">$1M+ Raised</span>
+            <span class="creator-tag tag-lgbtq">LGBTQ+ Advocate</span>
+            <span class="creator-tag tag-advocacy">Prizeo Proven</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Tyler Oakley is the original proof-of-concept for creator-driven charitable fundraising. A pioneer of the YouTube creator economy, Tyler has spent over a decade using his platform to raise money and awareness for LGBTQ+ youth. VidCon Hall of Fame inductee (2025). His Trevor Project relationship spans 15+ years.</p>
+            <h4>Cause Credentials</h4>
+            <p>Raised $525,679 in a single 2014 Prizeo campaign for The Trevor Project, the largest single-creator charitable campaign on the platform. Cumulative total exceeds $1M across all TrevorLIVE co-hosting years. Won the Trevor Youth Innovator Award (2014). The Tyler Oakley campaign is the case study that proved creators can drive charitable dollars at scale.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">YT Dedicated</div>
+                <div class="rate-value">$40,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$25,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">TikTok Video</div>
+                <div class="rate-value">$15,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$8,000</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$60,000</div>
+              <div class="bundle-desc">YT Dedicated + IG Reel + TikTok Video (full-platform cause campaign)</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms. Tyler has historically reduced rates for cause marketing campaigns.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/tyleroakley" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@tyleroakley" target="_blank">YouTube</a>
+          <a href="https://www.tiktok.com/@tyleroakley" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asher Lieberman -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/asher.jpeg" alt="Asher Lieberman">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Asher Lieberman</span>
+            <span class="creator-reach-inline">8.8M+</span>
+          </div>
+          <div class="creator-platform-line">7.4M TT &bull; 1.5M IG &bull; New York, NY</div>
+          <div class="creator-one-liner">LGBTQ+ advocacy and blood donation awareness. UPenn graduate. Commitment to promoting important public health causes.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-lgbtq">LGBTQ+ Advocate</span>
+            <span class="creator-tag tag-health">Blood Donation</span>
+            <span class="creator-tag tag-cause">Public Health</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Asher Lieberman combines massive TikTok reach with genuine advocacy for LGBTQ+ community and public health causes. His blood donation awareness content addresses a tangible, media-friendly cause with real public health stakes. UPenn educated with a distinctive voice that bridges entertainment and advocacy.</p>
+            <h4>Cause Credentials</h4>
+            <p>Known for promoting blood donation, a cause with direct public health impact and one that intersects with LGBTQ+ rights (historical restrictions on gay blood donors). His advocacy is specific and actionable, not performative.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">TikTok Video</div>
+                <div class="rate-value">$25,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$18,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$8,000</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$38,000</div>
+              <div class="bundle-desc">TikTok Video + IG Reel + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/asherlieberman" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@asherlieberman" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Josh Helfgott -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/joshhelfgott.jpeg" alt="Josh Helfgott">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Josh Helfgott</span>
+            <span class="creator-reach-inline">7.7M+</span>
+          </div>
+          <div class="creator-platform-line">5.9M TT &bull; 1.3M IG &bull; 450K YT &bull; New York, NY</div>
+          <div class="creator-one-liner">"Gay News" franchise creator. PinkNews Influencer of the Year nominee. Mobilized voters for midterm petition drives. Cornell grad, CIO.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-lgbtq">LGBTQ+ Advocate</span>
+            <span class="creator-tag tag-advocacy">Civic Mobilization</span>
+            <span class="creator-tag tag-cause">Voter Turnout</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Josh Helfgott created the "Gay News" TikTok series, a viral franchise covering queer history and current events that has become a primary news source for millions of LGBTQ+ viewers. Cornell graduate (Summa Cum Laude) and CIO of a major technology company, he brings an unusual credibility stack that bridges entertainment and institutional authority.</p>
+            <h4>Cause Credentials</h4>
+            <p>Mobilized followers for midterm petition drives protecting LGBTQ+ and trans rights. PinkNews Influencer of the Year nominee. Award-winning LGBTQ+ Advocate. His advocacy is primarily civic (petitions, voter turnout) rather than direct fundraising, making him ideal for a cause campaign with a civic engagement angle.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">TikTok Video</div>
+                <div class="rate-value">$20,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$15,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">YT Integration</div>
+                <div class="rate-value">$18,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$6,000</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$45,000</div>
+              <div class="bundle-desc">TikTok Video + IG Reel + YT Integration</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/joshhelfgott" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@joshhelfgott" target="_blank">TikTok</a>
+          <a href="https://www.youtube.com/@joshhelfgott" target="_blank">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CORE TIER -->
+  <div class="tier-group">
+    <span class="tier-label tier-core">Core</span>
+    <p class="tier-desc">Cause-aligned creators with strong engagement and direct relevance to DIRECTV's nonprofit partners. Veterans, families, athletes, and healthcare professionals.</p>
+
+    <!-- Dominic Wakeham -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/Dominic Wakeham1.jpeg" alt="Dominic Wakeham">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Dominic Wakeham</span>
+            <span class="creator-reach-inline">2.8M+</span>
+          </div>
+          <div class="creator-platform-line">2.2M TT &bull; 574K IG &bull; 12K YT</div>
+          <div class="creator-one-liner">U.S. Marine veteran. Humor and fitness content with a self-growth focus. Direct alignment with Bob Woodruff Foundation's veteran mission.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-veteran">U.S. Marine Veteran</span>
+            <span class="creator-tag tag-military">BWF Alignment</span>
+            <span class="creator-tag tag-sports">Fitness</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Dominic Wakeham is a U.S. Marine veteran whose content blends humor with fitness and lifestyle tips. His focus on self-growth and nutrition resonates with audiences who value authenticity and service. His military background makes him a natural ambassador for veteran causes and the Bob Woodruff Foundation partnership.</p>
+            <h4>DIRECTV Fit</h4>
+            <p>Dominic's veteran identity and humor-forward content style makes him ideal for both the "Home Team" microdrama series (veteran coming home to the game) and live Goals for Good watch parties. His audience skews male 18-35, overlapping with DIRECTV's sports subscriber base.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">TikTok Video</div>
+                <div class="rate-value">$8,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$6,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$2,500</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$14,000</div>
+              <div class="bundle-desc">TikTok Video + IG Reel + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/dominic.wakeham" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@dom.kade" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Puig Family -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/The Puig Family1.jpg" alt="The Puig Family">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">The Puig Family</span>
+            <span class="creator-reach-inline">1.6M+</span>
+          </div>
+          <div class="creator-platform-line">1.3M TT &bull; 168K IG &bull; 72K YT &bull; Clarksville, TN</div>
+          <div class="creator-one-liner">Military family from Fort Campbell. Dad hung up his military boots. Latina family, comedy and lifestyle. Veteran + RMHC crossover.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-veteran">Military Family</span>
+            <span class="creator-tag tag-family">Family Content</span>
+            <span class="creator-tag tag-cause">BWF + RMHC Crossover</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>The Puig Family is a Latina military family based in Clarksville, Tennessee, near Fort Campbell. Dad is a military veteran, mom works at the base. Their content covers family life, comedy, and the unique experience of raising children in a military community. They are one of the only creators in the roster who span both DIRECTV nonprofit partners: veteran through military service, family health through parenting content.</p>
+            <h4>DIRECTV Fit</h4>
+            <p>The rare crossover creator for both Bob Woodruff Foundation and RMHC campaigns. Their Fort Campbell base provides geographic authenticity for veteran-focused content, while their family comedy resonates with the RMHC family audience. Ideal for community events in military markets.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$3,500</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">YT Integration</div>
+                <div class="rate-value">$4,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$1,500</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$7,500</div>
+              <div class="bundle-desc">IG Reel + YT Integration + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/thepuigfam" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@thepuigfam" target="_blank">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jordan Chiles -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/Jordan Chiles 1.jpeg" alt="Jordan Chiles">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Jordan Chiles</span>
+            <span class="creator-reach-inline">2.7M+</span>
+          </div>
+          <div class="creator-platform-line">1.7M IG &bull; 1.0M TT &bull; Olympic Silver Medalist</div>
+          <div class="creator-one-liner">Olympic gymnast, silver medalist. Natural ambassador for Goals for Good expansion and sports-driven giving campaigns.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-sports">Olympic Athlete</span>
+            <span class="creator-tag tag-cause">Goals for Good</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Jordan Chiles is an Olympic silver medalist in gymnastics with a massive, engaged following. Her status as an elite athlete provides natural credibility for DIRECTV's Goals for Good sports campaigns. She bridges the gap between traditional sports sponsorship and creator-driven social content.</p>
+            <h4>DIRECTV Fit</h4>
+            <p>Jordan is the ideal face for the Goals for Good national expansion. An Olympic athlete promoting a per-goal donation mechanic carries authenticity that student-athlete ambassadors cannot match. Her presence elevates the campaign from corporate initiative to sports culture moment.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$15,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$5,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">Event Appearance</div>
+                <div class="rate-value">$25,000</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$35,000</div>
+              <div class="bundle-desc">IG Reel + IG Story Set + 1 Event Appearance</div>
+            </div>
+            <div class="rate-note">Pending usage rights, exclusivity, and scheduling availability.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/jordanchiles" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nick Mayhugh -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/Nick Mayhugh.jpeg" alt="Nick Mayhugh">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Nick Mayhugh</span>
+            <span class="creator-reach-inline">1.1M+</span>
+          </div>
+          <div class="creator-platform-line">910K TT &bull; 149K IG &bull; 3x Paralympic Gold Medalist</div>
+          <div class="creator-one-liner">Three-time Paralympic Gold Medalist. Disability advocacy and elite athletics. Powerful story for veteran-adjacent and accessibility campaigns.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-sports">Paralympic Gold</span>
+            <span class="creator-tag tag-accessibility">Accessibility</span>
+            <span class="creator-tag tag-cause">Disability Advocacy</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Nick Mayhugh is a three-time Paralympic Gold Medalist whose story of athletic excellence despite physical challenges is one of the most compelling in the creator space. His content covers training, competition, and the daily reality of life as a Paralympic athlete. He represents the intersection of sports excellence and disability advocacy.</p>
+            <h4>DIRECTV Fit</h4>
+            <p>Nick bridges sports and cause marketing in a way few creators can. His Paralympic credential gives Goals for Good campaigns a depth beyond typical sports endorsement. His story resonates with both the veteran community (shared themes of resilience and service) and the broader disability and accessibility audience.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$5,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$2,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">Event Appearance</div>
+                <div class="rate-value">$15,000</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$18,000</div>
+              <div class="bundle-desc">IG Reel + IG Story Set + 1 Event Appearance</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/nickmayhugh" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Miki Rai & Dr. Kevin -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/miki-rai.jpg" alt="Miki Rai &amp; Dr. Kevin">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Miki Rai &amp; Dr. Kevin</span>
+            <span class="creator-reach-inline">4.9M+</span>
+          </div>
+          <div class="creator-platform-line">Miki: 2.5M TT &bull; 1.4M YT &bull; 913K IG | Kevin: 79K IG &bull; 40K TT &bull; Seattle, WA</div>
+          <div class="creator-one-liner">RN + surgical resident couple. AAPI creators blending health education with lifestyle. UCLA nursing grad meets Caltech/UCSF med school.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-health">Healthcare</span>
+            <span class="creator-tag tag-family">Couple</span>
+            <span class="creator-tag tag-cause">Health Education</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Miki Rai is a Registered Nurse and leading AAPI creator. Her husband Dr. Kevin is a surgical resident (Caltech engineering honors, UCSF medical school). Together they document life in healthcare with warmth, humor, and educational depth. Their "Doctor vs. Nurse" dynamic is a natural content format.</p>
+            <h4>DIRECTV Fit</h4>
+            <p>Healthcare credibility makes them ideal for RMHC campaigns. The "Doctor vs. Nurse" format translates directly to cause content: comparing hospital experiences, discussing family health, reviewing RMHC programs through a clinical lens. Their AAPI representation adds diversity to the roster.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel (Duo)</div>
+                <div class="rate-value">$8,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">TikTok (Duo)</div>
+                <div class="rate-value">$6,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$3,000</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$15,000</div>
+              <div class="bundle-desc">IG Reel (Duo) + TikTok (Duo) + IG Story Set</div>
+            </div>
+            <div class="rate-note">Rates reflect paired content. Individual rates available. Pending usage rights.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/mikiraiii" target="_blank">Miki Instagram</a>
+          <a href="https://www.instagram.com/k3vmd" target="_blank">Kevin Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCOVERY TIER -->
+  <div class="tier-group">
+    <span class="tier-label tier-discovery">Discovery</span>
+    <p class="tier-desc">Niche cause authority and high authenticity. Lower reach, deeper engagement. These creators bring credibility that larger accounts cannot replicate.</p>
+
+    <!-- Bri Dineen -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/Bri Dineen1.jpg" alt="Bri Dineen">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Bri Dineen</span>
+            <span class="creator-reach-inline">231K+</span>
+          </div>
+          <div class="creator-platform-line">165K IG &bull; 65K TT &bull; New York, USA &bull; Age 34</div>
+          <div class="creator-one-liner">Toddler mom of 2 and RN passionate about the health and wellbeing of moms, children, and families. Worked with National Geographic, Public Good Projects, and iHealth.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-health">Registered Nurse</span>
+            <span class="creator-tag tag-family">Mom of 2</span>
+            <span class="creator-tag tag-cause">RMHC Alignment</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Bri Dineen is a Registered Nurse and toddler mom of two based in New York, passionate about the health and wellbeing of moms, children, and families. She draws on her clinical experience as an RN to make connections between health and motherhood. She has worked with National Geographic, Public Good Projects, and iHealth, blending family and lifestyle content with health education credibility.</p>
+            <h4>DIRECTV Fit</h4>
+            <p>Bri is a natural ambassador for RMHC. She understands hospital experiences as a nurse and family stress as a mother. Her partnerships with health education brands like Public Good Projects demonstrate she can deliver cause messaging authentically. Her audience of moms and families is exactly the RMHC donor profile.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$3,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">TikTok Video</div>
+                <div class="rate-value">$2,500</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$1,000</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$5,500</div>
+              <div class="bundle-desc">IG Reel + TikTok Video + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Esther Park -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/Esther Park  .jpg" alt="Esther Park">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Esther Park</span>
+            <span class="creator-reach-inline">762K+</span>
+          </div>
+          <div class="creator-platform-line">279K YT &bull; 253K IG &bull; 230K TT &bull; Los Angeles, CA</div>
+          <div class="creator-one-liner">Korean American mother and nonprofit/social justice advocate. Uses her platform to fight for justice and equity. Advocacy-first creator with lifestyle and motherhood content.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-advocacy">Social Justice</span>
+            <span class="creator-tag tag-family">Motherhood</span>
+            <span class="creator-tag tag-cause">Nonprofit Work</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Esther Park is a Korean American content creator and mother who works in the nonprofit and social justice space. Beyond her motherhood and lifestyle content, she believes her platform exists to make a positive impact, to fight for justice and equity, and to shed light on causes that matter. Her advocacy is woven into her content identity, not an add-on.</p>
+            <h4>DIRECTV Fit</h4>
+            <p>Esther's advocacy-first identity makes her a natural fit for cause marketing content that needs to feel genuine. As a Korean American mother, she bridges the family content audience (RMHC alignment) with the social justice audience. Her nonprofit background means she understands mission-driven work from the inside.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">YT Dedicated</div>
+                <div class="rate-value">$8,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$4,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">TikTok Video</div>
+                <div class="rate-value">$3,500</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$13,000</div>
+              <div class="bundle-desc">YT Dedicated + IG Reel + TikTok Video</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/estherpark" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@estherpark" target="_blank">YouTube</a>
+          <a href="https://www.tiktok.com/@estherpark" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tyanna Myers -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="assets/images/creators/Tyanna Myers.jpg" alt="Tyanna Myers">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Tyanna Myers</span>
+            <span class="creator-reach-inline">196K+</span>
+          </div>
+          <div class="creator-platform-line">100K IG &bull; 93K TT</div>
+          <div class="creator-one-liner">Deaf culture advocate. Featured on GMA (x2) and Kelly Clarkson Show. Teaches ASL to her whole family. Pioneered cochlear implant + natural hair content.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-accessibility">Deaf Culture</span>
+            <span class="creator-tag tag-advocacy">Accessibility</span>
+            <span class="creator-tag tag-family">Family</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Tyanna Myers is a Deaf culture advocate who has been featured on Good Morning America twice and the Kelly Clarkson Show. She teaches ASL to her entire family and pioneered content about styling natural Black hair with cochlear implants, a niche that didn't exist before her. Her cultural authority in accessibility and representation is nationally recognized.</p>
+            <h4>DIRECTV Fit</h4>
+            <p>Tyanna brings an accessibility and inclusion dimension to the creator roster that strengthens DIRECTV's community narrative. For employee events, her story of family, culture, and advocacy is deeply resonant. For external campaigns, her GMA credentials provide mainstream media crossover potential.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item">
+                <div class="rate-platform">IG Reel</div>
+                <div class="rate-value">$3,000</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">TikTok Video</div>
+                <div class="rate-value">$2,500</div>
+              </div>
+              <div class="rate-item">
+                <div class="rate-platform">IG Story Set</div>
+                <div class="rate-value">$1,200</div>
+              </div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundle</div>
+              <div class="bundle-price">$5,500</div>
+              <div class="bundle-desc">IG Reel + TikTok Video + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/tyannamyers" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@tyannamyers" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: INVESTMENT -->
+<section id="investment">
+  <div class="section-eyebrow">Investment</div>
+  <h2>Three ways to <em>start</em></h2>
+  <p class="section-lead">Each scenario is a distinct strategy, not a diluted version of the one above it. The right choice depends on what DIRECTV wants to prove first.</p>
+
+  <div class="scenario-grid reveal stagger">
+    <div class="scenario-card scenario-1" style="--i:0">
+      <div class="scenario-header">
+        <div>
+          <h3>The Pilot</h3>
+          <div class="scenario-label">4-5 Creators &bull; 90 Days &bull; Proof of Concept</div>
+        </div>
+        <div class="scenario-amount">$75K-$125K</div>
+      </div>
+      <ul>
+        <li>1 Premium anchor (Tyler Oakley or Chris Olsen) + 3-4 Core/Discovery creators</li>
+        <li>Short-form content across TikTok, Instagram, and YouTube</li>
+        <li>1 Prizeo sweepstakes activation benefiting BWF or RMHC</li>
+        <li>1 creator-hosted internal employee event</li>
+        <li>Impact dashboard tracking donors, dollars, and impressions</li>
+        <li>90-day campaign window with full reporting at close</li>
+      </ul>
+    </div>
+
+    <div class="scenario-card scenario-2" style="--i:1">
+      <div class="scenario-header">
+        <div>
+          <h3>The Program</h3>
+          <div class="scenario-label">All 13 Creators &bull; 6 Months &bull; Multi-Platform</div>
+        </div>
+        <div class="scenario-amount">$250K-$400K</div>
+      </div>
+      <ul>
+        <li>Full 13-creator roster across all three tiers</li>
+        <li>Multi-platform campaign: TikTok, Instagram, YouTube</li>
+        <li>2 Prizeo sweepstakes + 1 Charitybuzz premium auction</li>
+        <li>Goals for Good creator watch party series (4 events)</li>
+        <li>4 community events + 4 employee events, all creator-hosted</li>
+        <li>Full impact dashboard with quarterly reporting</li>
+      </ul>
+    </div>
+
+    <div class="scenario-card scenario-3" style="--i:2">
+      <div class="scenario-header">
+        <div>
+          <h3>The Institution</h3>
+          <div class="scenario-label">Full Roster + Format Production &bull; 12 Months</div>
+        </div>
+        <div class="scenario-amount">$500K-$750K</div>
+      </div>
+      <ul>
+        <li>Full 13-creator roster + Propagate-produced format series</li>
+        <li>"Home Team" microdrama series (6-8 episodes, Propagate production)</li>
+        <li>"The Giving Room" interview series (4-6 episodes)</li>
+        <li>National Goals for Good expansion across 32 markets</li>
+        <li>12 Prizeo/Charitybuzz activations throughout the year</li>
+        <li>12 community events + 12 employee events</li>
+        <li>AI donor acquisition integration per the 4-pillar proposal</li>
+        <li>Full-year program aligned to the strategic partnership proposal</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: TIMELINE -->
+<section id="timeline">
+  <div class="section-eyebrow">Timeline</div>
+  <h2>12-month <em>build</em></h2>
+  <p class="section-lead">Aligned to the four phases in the strategic partnership proposal. First activation in market within 60 days. Each phase builds on the last.</p>
+
+  <!-- Phase Cards -->
+  <div class="timeline-phases reveal stagger">
+    <div class="tl-phase-card tl-phase-1" style="--i:0">
+      <div class="tl-phase-num">01</div>
+      <div class="tl-phase-name">Assessment &amp; Architecture</div>
+      <div class="tl-phase-months">Months 1-2</div>
+      <ul class="tl-phase-items">
+        <li>Audit current programs</li>
+        <li>AI donor segmentation framework</li>
+        <li>Government grant mapping</li>
+        <li>Creator network identification</li>
+        <li>DIRECTV Giving Blueprint delivered</li>
+      </ul>
+    </div>
+    <div class="tl-phase-card tl-phase-2" style="--i:1">
+      <div class="tl-phase-num">02</div>
+      <div class="tl-phase-name">Foundation Activation</div>
+      <div class="tl-phase-months">Months 3-6</div>
+      <ul class="tl-phase-items">
+        <li>Veteran creator campaign live</li>
+        <li>Goals for Good expansion launched</li>
+        <li>Customer giving opt-in built</li>
+        <li>Grant applications submitted</li>
+        <li>Impact dashboard deployed</li>
+      </ul>
+    </div>
+    <div class="tl-phase-card tl-phase-3" style="--i:2">
+      <div class="tl-phase-num">03</div>
+      <div class="tl-phase-name">Scale &amp; Optimize</div>
+      <div class="tl-phase-months">Months 7-10</div>
+      <ul class="tl-phase-items">
+        <li>AI donor acquisition at full deployment</li>
+        <li>RMHC customer giving program active</li>
+        <li>BWF fundraising summit activation</li>
+        <li>Institutional philanthropy introductions</li>
+        <li>Format series in production</li>
+      </ul>
+    </div>
+    <div class="tl-phase-card tl-phase-4" style="--i:3">
+      <div class="tl-phase-num">04</div>
+      <div class="tl-phase-name">Year 1 Outcomes</div>
+      <div class="tl-phase-months">Months 11-12</div>
+      <ul class="tl-phase-items">
+        <li>Full Year 1 impact report</li>
+        <li>Donor acquisition data</li>
+        <li>Dollars raised + impressions</li>
+        <li>Employee participation metrics</li>
+        <li>Year 2 expansion recommendation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Gantt Chart -->
+  <div class="gantt-wrapper reveal">
+    <div class="timeline-grid">
+      <!-- Headers -->
+      <div class="tl-header"></div>
+      <div class="tl-header">M1</div>
+      <div class="tl-header">M2</div>
+      <div class="tl-header">M3</div>
+      <div class="tl-header">M4</div>
+      <div class="tl-header">M5</div>
+      <div class="tl-header">M6</div>
+      <div class="tl-header">M7</div>
+      <div class="tl-header">M8</div>
+      <div class="tl-header">M9</div>
+      <div class="tl-header">M10</div>
+      <div class="tl-header">M11</div>
+      <div class="tl-header">M12</div>
+
+      <!-- Row 1: Premium Creators -->
+      <div class="tl-row-label">Premium</div>
+      <div class="tl-cell tl-gold">Onboard</div>
+      <div class="tl-cell tl-gold">Onboard</div>
+      <div class="tl-cell tl-active-strong">Launch</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+
+      <!-- Row 2: Core Creators -->
+      <div class="tl-row-label">Core</div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-gold">Onboard</div>
+      <div class="tl-cell tl-gold">Onboard</div>
+      <div class="tl-cell tl-active-strong">Launch</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+
+      <!-- Row 3: Discovery Creators -->
+      <div class="tl-row-label">Discovery</div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-gold">Onboard</div>
+      <div class="tl-cell tl-gold">Onboard</div>
+      <div class="tl-cell tl-active-strong">Launch</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+      <div class="tl-cell tl-active">Active</div>
+
+      <!-- Row 4: Formats -->
+      <div class="tl-row-label">Formats</div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-gold">Develop</div>
+      <div class="tl-cell tl-gold">Develop</div>
+      <div class="tl-cell tl-active-strong">Produce</div>
+      <div class="tl-cell tl-active-strong">Produce</div>
+      <div class="tl-cell tl-active-strong">Release</div>
+      <div class="tl-cell tl-active">Sustain</div>
+      <div class="tl-cell tl-active">Sustain</div>
+      <div class="tl-cell tl-active">Sustain</div>
+      <div class="tl-cell tl-active">Sustain</div>
+      <div class="tl-cell tl-active">Sustain</div>
+
+      <!-- Row 5: Events -->
+      <div class="tl-row-label">Events</div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-empty"></div>
+      <div class="tl-cell tl-active-strong">Q2</div>
+      <div class="tl-cell tl-active">Event</div>
+      <div class="tl-cell tl-active">Event</div>
+      <div class="tl-cell tl-active-strong">Q3</div>
+      <div class="tl-cell tl-active">Event</div>
+      <div class="tl-cell tl-active">Event</div>
+      <div class="tl-cell tl-active-strong">Q4</div>
+      <div class="tl-cell tl-active">Event</div>
+      <div class="tl-cell tl-active">Event</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: NEXT STEPS -->
+<section id="next">
+  <div class="section-eyebrow">Next Steps</div>
+  <h2>How we <em>move forward</em></h2>
+
+  <ol class="steps-list reveal stagger">
+    <li><strong>Align on investment scenario.</strong> The Pilot, The Program, or The Institution. Each is a complete strategy, not a budget negotiation.</li>
+    <li><strong>Creator confirmation and rate negotiation.</strong> All creators in this document are managed through Select Management. Rates are current. Confirmation and booking begin immediately upon agreement.</li>
+    <li><strong>Campaign architecture and format development.</strong> Charity Brands and Summit Digital build the DIRECTV Giving Blueprint, including format concepts, event calendar, and Charitybuzz integration plan.</li>
+    <li><strong>First activation in market within 60 days.</strong> Charity Brands is structured to move fast. Assessment and architecture complete in Months 1-2. First creator content live in Month 3.</li>
+  </ol>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div style="display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; margin-bottom: var(--space-lg);">
+      <div>
+        <div class="footer-name">Tom Nwachuku</div>
+        <div class="footer-title">Founder, Summit Digital &bull; Integrated Consulting</div>
+        <div class="footer-contact">
+          <a href="mailto:tom@summitxdigital.com">tom@summitxdigital.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-name">Stephen Adler</div>
+        <div class="footer-title">CEO &amp; Founder, Charity Brands Inc.</div>
+        <div class="footer-contact">
+          <a href="mailto:sadler@charitybrands.com">sadler@charitybrands.com</a>
+          <a href="tel:9145369050">(914) 536-9050</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-contact" style="margin-bottom: var(--space-md);">
+      <a href="https://charitybrands.com" target="_blank">charitybrands.com</a>
+    </div>
+    <div class="footer-conf">This document is confidential and prepared exclusively for DIRECTV.</div>
+  </div>
+</footer>
+
+<script>
+// --- Scroll Reveal ---
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+  observer.observe(el);
+});
+
+// --- Counter Animation ---
+function animateCounter(el, target, suffix) {
+  const duration = 1200;
+  const start = performance.now();
+  const isDecimal = target % 1 !== 0;
+
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+    const current = isDecimal ? (target * eased).toFixed(1) : Math.floor(target * eased);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.counted) {
+      entry.target.dataset.counted = 'true';
+      const text = entry.target.textContent.trim();
+      const match = text.match(/^([\$]?)([\d,.]+)([+MKB%]*)/);
+      if (match) {
+        const prefix = match[1];
+        const num = parseFloat(match[2].replace(/,/g, ''));
+        const suffix = match[3];
+        if (!isNaN(num)) {
+          entry.target.textContent = prefix + '0' + suffix;
+          const dur = 1200;
+          const start = performance.now();
+          function tick(now) {
+            const p = Math.min((now - start) / dur, 1);
+            const e = 1 - Math.pow(1 - p, 3);
+            const v = num * e;
+            let display;
+            if (num >= 100) display = Math.floor(v).toLocaleString();
+            else if (num >= 10) display = Math.floor(v);
+            else display = v.toFixed(1);
+            entry.target.textContent = prefix + display + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+      }
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.hero-stat .value, .cbz-val, .opp-stat').forEach(el => {
+  counterObserver.observe(el);
+});
+
+// --- Active Nav Highlight ---
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+      });
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px -60% 0px' });
+
+sections.forEach(section => navObserver.observe(section));
+</script>
+</body>
+</html>
